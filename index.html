@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href= "etch.css">
 </head>
 <body>
-    <div id = 'container'>Oluchukwu</div>
+    <div id = 'container'></div>
 
 </body>
 <script>
     const container = document.getElementById('container');
-    let rows = document.getElementByClassName('gridRow');
-    let cells = document.getElementByClassName('cell');
-
+    let rows = document.getElementsByClassName('gridRow');
+    let cells = document.getElementsByClassName('cell');
+defaultGrid();
     //creates a default grid sized 16x16
     function defaultGrid() {
         makeRows(16);
