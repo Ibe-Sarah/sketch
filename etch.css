@@ -11,3 +11,18 @@
     display: inline-block;
     margin-right: 2px;
   }
+  .hoverColor {
+      background-color: pink
+  }
+  .hoverColor2 {
+    background-color: blueviolet;
+}
+
+.hoverColor3 {
+    background-color: white;
+    transition:3s;
+}
+#Btn {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}

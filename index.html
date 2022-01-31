@@ -8,6 +8,8 @@
     <link rel="stylesheet" href= "etch.css">
 </head>
 <body>
+
+    <button id = "Btn">New Grid</button>
     <div id = 'container'></div>
 
 </body>
@@ -15,11 +17,13 @@
     const container = document.getElementById('container');
     let rows = document.getElementsByClassName('gridRow');
     let cells = document.getElementsByClassName('cell');
+        
 defaultGrid();
     //creates a default grid sized 16x16
     function defaultGrid() {
         makeRows(16);
         makeColums(16);
+        
     }
 
     function makeRows(rowNum) {
@@ -33,9 +37,22 @@ defaultGrid();
         for (i = 0; i<rows.length;i++) {
             for (j = 0; j< cellNum; j++) {
                 let newCell  =document.createElement("div");
+    
                 rows[j].appendChild(newCell).className = "cell"           }
         }
     }
+    for(let i= 0; i<rows.length; i++) {
+    rows[i].addEventListener('mouseover', e => e.target.classList.add('hoverColor'))
+    }
+    for(let i= 0; i<rows.length; i++) {
+    rows[i].addEventListener('mouseout', e => e.target.classList.add('hoverColor3'))
+    }
 
-</script>
+    for(let i= 0; i<cells.length; i++) {
+    cells[i].addEventListener('mouseover', e => e.target.classList.add('hoverColor2'))
+    }
+    for(let i= 0; i<cells.length; i++) {
+    cells[i].addEventListener('mouseout', e => e.target.classList.add('hoverColor3'))
+    }
+    </script>
 </html>
